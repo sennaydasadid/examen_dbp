@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert títle here</title>
+		
+		<script type="text/javascript">	
+			function validar(){
+				var cui = document.getElementById("cui").value;
+				var clave = document.getElementById("clave").value;
+				var validarcui = 20182911;
+				var validarclave=senayda;
+				if(clave==""){
+					alert("El campo Clave esta vacío");
+					return false;
+				}
+				if(cui==""){
+					alert("El campo CUI esta vacío");
+					return false;
+				}
+				else if(cui,length<8){
+					alert("Numero de CUI invalido")
+				}
+				else if (!validarcui.test(cui)) {
+				    alert("El cui no es válido");
+				    return false;
+				}
+				else if(validarcui!=cui){
+					alert("Proporcionar CUI correcta");
+					return false;
+				}
+				else if(validarclave!=clave){
+					alert("Proporcionar clace correcta");
+					return false;
+				}
+			}	
+			
+		</script>
+	</head>
+	
+	<body>
+		<form class="from-register" action="myervlet" method="POST" name="Datos" onsubmit="return validar()">
+		CUI:20182811
+		Clave:senayda
+			
+			<div>
+				<label for="cui">CUI del estudiante:</label>
+	  			<input type="text" name="cui" id="cui" ><br><br>
+			</div>
+			<div>
+				<label for="clave">Clave:</label>
+		    	<input type="password" name="clave" id="clave" ><br><br>
+			</div>
+		
+		
+		
+	    <input type="submit" value="Enviar" onclick=' return enviarFormulario()'>
+		</form> 
+	</body>
+</html>
